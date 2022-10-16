@@ -11,14 +11,21 @@
     <div id="container">
         <img id="eu" src="https://i.pinimg.com/originals/0a/53/46/0a5346096266b7db04cac3b5d57b2afd.jpg" alt="Andrey" width="200">
         <h1>Conversão de Temperaturas</h1>
-            <label for="celsius">Celsius</label> <br>
-            <input type="number" id="celsius" placeholder="Digite a temperatura em Celsius"><br>
-            <button onclick="calcular()">Calcular</button>
-            <div id="res">Resultados</div>
+            <form id="form" autocomplete="off">
+                <div class="formgroup">
+                    <label for="celsius">Celsius</label>
+                    <input type="number" id="celsius" placeholder="Digite a temperatura em Celsius">
+                </div>
+                <button type="submit" onclick="calcular()">Calcular</button>
+            </form>
+            <div id="res"><strong>Resultados</strong></div>
     </div>
 
     <script>
         
+        const form = window.document.getElementById('form')
+        form.addEventListener('submit', (e) => e.preventDefault())
+
         function calcular() {
         
         var c = window.document.getElementById('celsius')
@@ -26,8 +33,13 @@
         var k = c1 + 273
         var f = c1 * 1.8 + 32
         
-        res.innerHTML = `A temperatura <strong>${c1}°C</strong> em Kelvin é <strong>${k}K</strong>, e em Fahrenheit é <strong>${f}°F</strong>.`
+        res.innerHTML = `A temperatura <strong>${c1}°C</strong> em Kelvin é <strong>${k}K</strong>, e em Fahrenheit é <strong>${f.toFixed(1)}°F</strong>.`
         }
+
+        
+
+
+
     </script>
 
 </body>
