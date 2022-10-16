@@ -35,11 +35,11 @@ h1 {
 }
 
 label {
-    text-align: right;
-    padding-right: 345px;
     font-weight: 600;
     font-size: 16px;
     color: #E1E1E6;
+    text-align: left;
+    margin-bottom: 12px;
 }
 
 #celsius {
@@ -60,6 +60,19 @@ label {
     outline: none;
     border: 2px solid #98E1FB;
     color: #E1E1E6;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #7C7C8A;
+    opacity: 1; /* Firefox */
+}
+
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #7C7C8A;
+}
+
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #7C7C8A;
 }
 
 input::-webkit-outer-spin-button,
@@ -85,4 +98,11 @@ button {
 
 #res {
     color: #E1E1E6;
+}
+
+
+@media screen and (max-width: 600px) {
+    #celsius, button {
+        width: 85vw;
+    }
 }
