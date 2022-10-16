@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: white;
+    background-color: #121214;
+    text-align: center;
+}
+
+#container {
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+#eu {
+    border-radius: 50%;
+}
+
+h1 {
+    margin: 28px;
+    font-weight: bold;
+    font-size: 32px;
+    color: #E1E1E6;
+}
+
+label {
+    text-align: right;
+    padding-right: 345px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #E1E1E6;
+}
+
+#celsius {
+    margin: 16px;
+    width: 400px;
+    height: 48px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    font-size: 18px;
+    background-color: #202024;
+    color: #7C7C8A;
+    border: none;
+    border-radius: 4px;
+}
+
+#celsius:focus {
+    outline: none;
+    border: 2px solid #98E1FB;
+    color: #E1E1E6;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+button {
+    padding: 12px 120.5px 12px 120.5px;
+    background-color: #81D8F7;
+    border: none;
+    margin: 20px;
+    width: 400px;
+    height: 43;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+#res {
+    color: #E1E1E6;
+}

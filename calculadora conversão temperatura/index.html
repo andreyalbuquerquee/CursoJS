@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora Física Andrey</title>
+</head>
+<body>
+    <div id="container">
+        <img id="eu" src="https://i.pinimg.com/originals/0a/53/46/0a5346096266b7db04cac3b5d57b2afd.jpg" alt="Andrey" width="200">
+        <h1>Conversão de Temperaturas</h1>
+        <label for="celsius">Celsius</label> <br>
+        <input type="number" id="celsius" placeholder="Digite a temperatura em Celsius"><br>
+        <button onclick="calcular()">Calcular</button>
+        <div id="res">Resultados</div>
+    </div>
+
+    <script>
+        
+        function calcular() {
+        
+        var c = window.document.getElementById('celsius')
+        var c1 = Number(c.value)
+        var k = c1 + 273
+        var f = c1 * 1.8 + 32
+        
+        res.innerHTML = `A temperatura <strong>${c1}°C</strong> em Kelvin é <strong>${k}K</strong>, e em Fahrenheit é <strong>${f}°F</strong>.`
+        }
+    </script>
+
+</body>
+</html>
